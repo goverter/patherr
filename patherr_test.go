@@ -38,9 +38,9 @@ func TestString(t *testing.T) {
 }
 
 func TestMulti(t *testing.T) {
-	single := Wrap(err, Key("jmattheis"), Index(5), Key("abc"))
+	single := Wrap(err, Key("jmattheis"), Index(5), Key("abc"), Field("Name"))
 
-	multi := Wrap(err, Key("abc"))
+	multi := Wrap(err, Key("abc"), Field("Name"))
 	multi = Wrap(multi, Index(5))
 	multi = Wrap(multi, Key("jmattheis"))
 
