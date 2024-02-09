@@ -12,7 +12,7 @@ func Wrap(err error, subPath ...Element) error {
 	return &PathError{Inner: err, Path: subPath}
 }
 
-// PathError is an error with a path where the error occured.
+// PathError is an error with a path where the error occurred.
 type PathError struct {
 	Inner error
 	Path  Path
